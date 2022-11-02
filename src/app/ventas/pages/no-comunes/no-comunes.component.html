@@ -59,4 +59,15 @@
       </ul>
     </p-fieldset>
   </div>
+
+  <!-- Mostrar el formato tal cual javascript al usuario -->
+  <div class="col p-md-6 p-dm-9">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <pre *ngIf="!(miObservable | async)">Resolviendo observable</pre>
+      <pre>{{ miObservable | async }}</pre>
+
+      <pre *ngIf="!(valorPromesa | async)">Resolviendo promesa</pre>
+      <pre>{{ valorPromesa | async }}</pre>
+    </p-fieldset>
+  </div>
 </div>
